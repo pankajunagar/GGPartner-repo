@@ -4,7 +4,7 @@
 
 export const environment = {
   baseUrl: "https://gghomesalon.com/webapp/public/api/user/",
-  map_key: "AIzaSyBqPcPUJFsC_gzl-q-l5loUOCZAP1bLvJ4",
+  map_key: "AIzaSyD2jNCC5xZEp6YhfeT16hrzJT3FIWcFahE",
   production: true,
 };
 
