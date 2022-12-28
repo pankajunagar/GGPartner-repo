@@ -1,0 +1,120 @@
+ion-header {
+
+  // background: transparent !important;
+  // --background: transparent !important;
+  ion-toolbar {
+    border-radius: 0px 0px 20px 20px;
+    --background : var(--ion-color-yellow);
+  }
+}
+
+ion-content {
+  --background      : url("../../../assets/UI_Icons/before-dashboard/background.jpg") 0 0/100% 100% no-repeat;
+  // url("../../../assets/UI_Icons/before-dashboard/background.jpg")
+  color             : white;
+  display           : flex;
+  align-items       : center;
+  // border      : 1px solid rgb(190, 187, 187);
+  flex              : 1;
+  // border         : 1px solid red;
+  // position: relative;
+  // height: 100vh;
+  // margin: 0;
+
+  .center {
+    top            : 60%;
+    transform      : translateY(60%);
+    justify-content: center;
+    align-items    : center;
+    // font-family: "Ubuntu";
+    text-align     : center;
+
+    // border         : 1px solid red;
+    // .otp-icon {
+    //   height: 132px;
+    //   width : 132px;
+    //   margin: 13vh 0px;
+    // }
+    // color: white;
+    .info-title {
+      font-family: "arial";
+      color      : var(--ion-color-blue);
+      margin-top : 0px;
+      font-size  : 25px;
+      line-height: 40px;
+      color      : white;
+    }
+
+    .info-text {
+      font-size  : 16px;
+      font-family: "arial";
+      color      : var(--ion-color-dark-blue);
+      line-height: 25px;
+      color      : white;
+
+      span {
+        font-size: 20px;
+      }
+    }
+
+
+    .otp-input-section {
+      display           : flex;
+      justify-content   : center;
+      margin-top        : 30px;
+      // border         : 1px solid red;
+      // background: transparent !important;
+      // background: black;
+      height            : 50px;
+
+
+      ion-input {
+        border         : 1px solid gold;
+        // display:inline-block;
+        // width:50px;
+        max-width      : 50px;
+        height         : 50px;
+        margin         : 10px;
+        border-radius  : 8px;
+        color          : black;
+        --color        : black;
+        --border-radius: 8px;
+        --background   : #e1e1e1;
+        --padding-start: 7px;
+      }
+
+      ion-input[type=Number]:focus {
+        border       : 1px solid gold;
+        border-radius: 8px
+      }
+
+      // ion-input[type=tel]:focus{
+      //   border: 5px solid red;
+      // }
+      input {
+        // border         : 1px solid red;
+        margin-right      : 16px;
+        max-width         : 50px;
+        --background      : white;
+        --border-radius   : 8px;
+        border-radius     : 8px;
+        // --color        : white;
+        --padding-start   : 0px;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+    }
+
+    .btn-general {
+      text-align: center;
+      font-size : 16px;
+      height    : 50px;
+      margin-top: 60px;
+      color     : gold;
+      font      : 20px;
+    }
+  }
+
+}

@@ -1,0 +1,37 @@
+<ion-content class='center'>
+
+  <div class="card">
+    <div class="text_icon">
+      <!-- <p>Have a coupon code, Please <span>apply</span> it below.</p>
+      <ion-icon (click)='close()' name='close-outline' slot="end"></ion-icon> -->
+      <ion-item lines=none>
+        <img src="../../../assets/UI_Icons/women-services/face.png" alt="" width="80px" height="80px"  *ngIf='photo===null'>
+        <img src={{photo}} alt="" width="80px" height="80px"  *ngIf='photo!==null'>
+        <div>
+          <p>{{name}}</p>
+          <p>{{location.split(', ' && ' ').slice(-1)}}</p>
+        </div>
+      </ion-item>
+    </div>
+    <div class="align">
+      <div>
+        <p id='bold'>Service Type</p>
+        <p id='light' *ngFor='let item of service_type; let i = index;'>{{item}}. </p>
+      </div>
+      <div>
+        <p id='bold'>Sheduled Date / Time</p>
+        <p id='light'>{{data.booking_date}}</p>
+      </div>
+    </div>
+
+    <div>
+      <p style="font-weight: bold;font-size: 16px; margin: 15px;">Service Location</p>
+      <p style="font-weight: 400; font-size: 14px; margin: 15px">{{location}}</p>
+    </div>
+    <div class="align">
+      <ion-button (click)='accept()'>Accept</ion-button>
+      <ion-button (click)='close()'>Reject</ion-button>
+    </div>
+  </div>
+
+</ion-content>

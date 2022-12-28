@@ -1,0 +1,55 @@
+<!-- <ion-header [translucent]="true"  class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      My Services
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content style="--background: linear-gradient(to bottom, rgb(255, 255, 255, 1), rgb(248,237,219))">
+  <div>
+    <ion-item style="--background:black !important; color: white;" lines='none'>
+      <ion-buttons slot="start" class="ion-no-margin">
+        <ion-back-button defaultHref="tabs/home" icon="chevron-back" mode="md" class="btn-back"></ion-back-button>
+      </ion-buttons>
+      <ion-title header-title>My Services</ion-title>
+    </ion-item>
+  </div>
+
+  <div class="ion-padding">
+    <ion-refresher slot="fixed" id="refresher" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+    <div *ngIf='data.length=== 0' class="noavail">
+      <p>
+        No Services Available.
+      </p>
+      <ion-icon name='happy-outline'></ion-icon>
+    </div>
+
+    <div class="card " *ngFor='let item of data; let i = index'>
+      <div class="align">
+        <div class="div1">
+          <img src="../../assets/UI_Icons/women-services/face.png" alt="" width="90px" height="90px"
+            *ngIf='item.image===null' />
+          <img src='{{"https://gghomesalon.com/webapp/public/upload/"+item.image}}' alt="" width="90px" height="90px"
+            *ngIf='item.image!==null' />
+          <p>{{item.currency}} <span>{{item.total}}</span></p>
+        </div>
+        <div class="div2">
+          <div class="div2_1">
+            <p id="name">{{item.name}}</p>
+            <p id='duration'>{{item.duration}} mins</p>
+          </div>
+          <p id="location">Service Location</p>
+          <p id="address" *ngIf='item.location!==null'>{{item.location}}.</p>
+          <p id="address" *ngIf='item.location===null'>Location not Available.</p>
+          <p id="timing">Timing</p>
+          <p id="time" *ngIf="item.booking_date===''">No timing Available.</p>
+          <p id="time" *ngIf="item.booking_date!==''">{{item.booking_date}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

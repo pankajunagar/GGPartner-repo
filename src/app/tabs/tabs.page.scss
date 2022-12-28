@@ -1,0 +1,10 @@
+
+ion-tabs {
+  ion-tab-bar {
+    --background: var(--ion-color-yellow);
+    ion-tab-button {
+      --color: rgb(168, 165, 165);
+      --color-selected: rgb(230, 198, 20);
+    }
+  }
+}

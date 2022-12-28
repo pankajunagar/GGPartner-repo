@@ -1,0 +1,90 @@
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content style="--background: linear-gradient(to bottom, rgb(255, 255, 255, 1), rgb(248,237,219))">
+  <div>
+    <ion-item style="--background:#d0ab35 !important; color: white;" lines='none'>
+      <ion-buttons slot="start" class="ion-no-margin">
+        <ion-back-button defaultHref="tabs/home" icon="chevron-back" mode="md" class="btn-back"></ion-back-button>
+      </ion-buttons>
+      <ion-title header-title>Profile</ion-title>
+      <ion-button slot="end" class="ion-no-margin" (click)='logOut()'>
+        <ion-icon name='log-out-outline' size='30'></ion-icon>
+      </ion-button>
+    </ion-item>
+  </div>
+
+  <div class="avatar">
+    <div class="insideAvtar">
+      <div class="useravatar">
+        <div class='edit' (click)='addImage()'>
+          <button class="editbutton">
+            <ion-icon name='pencil'></ion-icon>
+          </button>
+        </div>
+        <!-- {{data.image}} -->
+        <div (click)='onImageClick()'>
+          <img *ngIf='localImage !== null' src="{{localImage}}" height="100px" width="100px">
+          <img *ngIf='localImage === null' src="../../assets/images/user.png" height="100px" width="100px">
+
+        </div>
+      </div>
+      <br>
+      <ion-label style="text-align: center;">{{data.name}}</ion-label>
+    </div>
+  </div>
+
+  <div style="background: transparent !important; margin-left: 15px; margin-right: 15px;">
+
+
+    <div *ngIf='edit_info === true' class="editinfo">
+      <div style="margin-bottom: 10px;" class="info">
+        <ion-input type="text" class='name' required='true' placeholder='Enter your name...'
+          [(ngModel)]='editInfo.name'></ion-input>
+      </div>
+
+      <!-- <div style="margin-bottom: 10px;">
+        <ion-input type="text" class='number' required='true' placeholder='Number with code,e.g:-"+91"'
+          [(ngModel)]='editInfo.phone_no'>
+        </ion-input>
+      </div> -->
+
+      <!-- <div style="margin-bottom: 10px;">
+        <ion-input class="email" required='true' placeholder='Email ID' type="email" [(ngModel)]='editInfo.email'>
+        </ion-input>
+      </div> -->
+ 
+      <ion-button type='submit' (click)="saveInfo()" style="--background:rgb(255, 190, 68) !important; color: white; --background-activated: rgb(255, 190, 68);"
+        *ngIf='(editInfo.name&&editInfo.email&&editInfo.phone_no)!=undefined&& (editInfo.name&&editInfo.email&&editInfo.phone_no)!=""'>
+        submit
+      </ion-button>
+      <ion-button (click)="edit_info=false" style="--background:rgb(255, 190, 68) !important; color: white; --background-activated: rgb(255, 190, 68);"
+        *ngIf='(editInfo.name&&editInfo.email&&editInfo.phone_no)===undefined||(editInfo.name&&editInfo.email&&editInfo.phone_no)===""'>
+        Cancel
+      </ion-button>
+    </div>
+
+
+    <div *ngIf='edit_info === false'>
+      <div (click)='editHere()' style="text-align: right;">
+        <ion-chip outline='true' color='success'>
+          <ion-label>Edit your Info</ion-label>
+        </ion-chip>
+      </div>
+
+      <div style="margin-bottom: 10px;">
+        <p style="color: gray;">Number</p>
+        <p style="color: black; font-size:  18px;">{{data.phone_no}}</p>
+      </div>
+
+      <div style="margin-bottom: 10px;">
+        <p style="color: gray;">Email ID</p>
+        <p style="color: black; font-size:  18px;">{{data.email}}</p>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,132 @@
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="ion-no-margin">
+      <ion-back-button defaultHref="tabs/home" icon="chevron-back" mode="md" class="btn-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title header-title>Signup to continue</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div>
+    <ion-item style="--background:transparent !important; color: white;" lines='none'>
+      <ion-buttons slot="start" class="ion-no-margin">
+        <ion-back-button defaultHref="tabs/home" icon="chevron-back" mode="md" class="btn-back"></ion-back-button>
+      </ion-buttons>
+    </ion-item>
+  </div>
+  <div class="container">
+    <div class="logo">
+      <img src="../../../assets/UI_Icons/splash/logonew-1.png" alt="" height="200px" width="200px">
+      <p>Sign Up</p>
+    </div>
+
+    <!-- <form action="" #f="ngForm"> -->
+    <form action="" #f="ngForm" class="form">
+      <ion-item>
+        <ion-input class='name' clear-on-edit='true' required='true' placeholder='Full Name' type="text"
+          [(ngModel)]='data.name'>
+        </ion-input>
+      </ion-item>
+
+      <!-- <ion-item>
+        <ion-select placeholder='+91' [(ngModel)]="selectedCode">
+          <ion-select-option value={{code.code}} *ngFor='let code of country_code.countries'>
+            {{code.code}}
+          </ion-select-option>
+        </ion-select>
+        <ion-input placeholder='Mobile Number' required='true' clear-on-edit='true' type="tel" maxlength='10' max="10"
+          [(ngModel)]='phone_number'></ion-input>
+      </ion-item> -->
+      <ion-item>
+        <!-- <img src="{{flagcountry}}" alt="" height="40px" width="40px"> -->
+        <ion-select placeholder='+971' [(ngModel)]="selectedCode" (click)="loadFlags()">
+          <ion-select-option value="{{code.callingCodes}} {{code.flag}}"
+            *ngFor='let code of country_code; let i= index;'>
+            +{{code.callingCodes}}
+          </ion-select-option>
+        </ion-select>
+        <ion-input placeholder='Mobile Number' required='true' inputmode='numeric' autocomplete clearOnEdit
+          enterkeyhint='send' type="tel" maxlength='15' [(ngModel)]='phone_number'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input class="email" clear-on-edit='true' required='true' placeholder='Email Address' type="email"
+          [(ngModel)]='data.email'>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input class="email" clear-on-edit='true' required='true' placeholder='Enter Password' type="password"
+          [(ngModel)]='data.password'>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input class="address" clear-on-edit='true' required='true' placeholder='Add Address' type="text"
+          [(ngModel)]='data.address'>
+        </ion-input>
+      </ion-item>
+
+      <ion-item (click)='servicesListModal(servicesList)' id="servicewaali" class="serviceMargin">
+        <ion-label class="service" *ngIf='selectedServiceList.length === 0'>
+          <div class="select">
+            <div class="gap">
+              <ion-text>Select Service</ion-text>
+              <ion-icon name='caret-down-outline' slot="end"></ion-icon>
+            </div>
+          </div>
+        </ion-label>
+        <ion-label class="service" *ngIf='selectedServiceList.length !== 0'>
+          <div class="select">
+            <div class="gap">
+              <ion-text>{{selectedServiceList.length}} Services seleted</ion-text>
+              <ion-icon name='caret-down-outline' slot="end"></ion-icon>
+            </div>
+          </div>
+        </ion-label>
+
+      </ion-item>
+
+      <div class="login"
+        *ngIf="(data.name && phone_number && data.email)!=undefined&&(data.name && phone_number && data.email)!=''">
+        <button [disabled]="(data.name && phone_number && data.email)!=undefined?false:true" (click)="getOTP()">
+          <!-- singup -->
+          <img src="../../../assets/UI_Icons/before-dashboard/button.png" alt="" width=70px height=70px>
+        </button>
+      </div>
+
+    </form>
+
+
+
+    <!-- <form action=""  #f="ngForm">
+        <p input-label>Name</p>
+      <ion-input custom-input type="text" placeholder="Name" [(ngModel)]="data.name" name="name" required></ion-input>
+      <p class="err" *ngIf="err?.name">{{err?.name}}*</p>
+
+      <p input-label>Email</p>
+      <ion-input custom-input type="email" placeholder="Email" [(ngModel)]="data.email" name="email" required></ion-input>
+      <p class="err" *ngIf="err?.email">{{err?.email}}*</p>
+
+      <p input-label>Phone</p>
+      <div class="custom-phone-input">
+
+        <ion-input custom-input type="tel" placeholder="Phone" [(ngModel)]="data.phone_no" name="phone" required>
+        </ion-input>
+      </div>
+      <p class="err" *ngIf="err?.phone_no">{{err?.phone_no}}*</p>
+      <ion-button expand="block" (click)="doSignUp()" [disabled]="!f.valid">
+        Signup
+      </ion-button>
+     </form> -->
+
+    <div class="signup">
+      <p class="accont-label ">Already have an account?
+        <span class="bold" (click)="doSignIn()"><u>Login</u></span>
+      </p>
+
+    </div>
+  </div>
+
+</ion-content>

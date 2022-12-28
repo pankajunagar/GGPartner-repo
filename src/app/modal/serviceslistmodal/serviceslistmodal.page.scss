@@ -1,0 +1,162 @@
+ion-content {
+  --background   : transparent !important;
+  // border: 1px solid red;
+  // flex: 1;
+  align-items    : center;
+  justify-content: center;
+  margin-left    : auto;
+  margin-right   : auto;
+  display        : block;
+}
+
+ion-toolbar {
+  --background: transparent !important;
+}
+
+.center {
+  display        : flex;
+  justify-content: center;
+  align-content  : center;
+  align-items    : center;
+}
+
+.CARD {
+  // border       : 1px solid blue;
+  // margin       : 20px 10px;
+  margin-top      : 20px;
+  margin-bottom   : 60px;
+  margin-left     : 10px;
+  margin-right    : 10px;
+  border-radius   : 5px;
+  // display      : flex;
+  background      : black;
+  position        : absolute;
+  top             : 0px;
+  right           : 0px;
+  bottom          : 0px;
+  left            : 0px;
+
+  overflow: auto;
+
+  ion-checkbox {
+    --background          : white;
+    --background-checked  : rgb(226, 198, 36);
+    --border-color        : rgb(226, 198, 36);
+    --border-color-checked: white;
+  }
+}
+
+.CARD2 {
+  // margin-top      : 20px;
+  // margin-bottom   : 20px;
+  margin-left          : 10px;
+  margin-right         : 10px;
+  border-radius        : 5px;
+  // display      : flex;
+  // --background      : gold;
+  position             : absolute;
+  // top             : 0px;
+  right                : 0px;
+  bottom               : 10px;
+  left                 : 0px;
+  overflow             : auto;
+
+  ion-button {
+    --background   : rgb(211, 168, 52);
+    width          : 99%;
+    --border-radius: 10px !important;
+    text-transform : none;
+  }
+}
+
+// .card {
+//   box-shadow   : 0 0px 1.5px 3px rgba(46, 46, 46, 0.1);
+//   background   : white;
+//   margin       : 10px;
+//   border-radius: 4px;
+//   padding      : 5px;
+//   align-items  : center;
+//   position     : absolute;
+//   top          : 5%;
+//   transform    : translate(0, -50%);
+//   width        : 95%;
+
+//   .text_icon {
+//     display        : flex;
+//     align-items    : center;
+//     justify-content: space-between;
+
+//     ion-item {
+//       img {
+//         border-radius: 50%;
+//       }
+//     }
+
+//     p {
+//       font-size  : 14px;
+//       margin-left: 10px;
+
+//       span {
+//         color: #f27c1a;
+//       }
+//     }
+
+//     ion-icon {
+//       margin-top: -20px;
+//       font-size : 26px;
+//       color     : #f27c1a;
+//     }
+//   }
+
+//   #isvalide {
+//     color : red;
+//     margin: 10px;
+//   }
+
+//   .align {
+//     display        : flex;
+//     align-items    : center;
+//     justify-content: space-between;
+//     margin         : 15px;
+
+//     #bold {
+//       font-weight: bold;
+//       font-size  : 16px;
+//     }
+
+//     #light {
+//       font-weight: 400;
+//       font-size  : 14px;
+//     }
+
+//     ion-button {
+//       --background   : linear-gradient(rgb(204, 182, 122) 0%, rgb(182, 152, 30)) !important;
+//       --border-radius: 30px !important;
+//       text-transform : none;
+//       width          : 110px;
+//     }
+//   }
+// }
+
+// .applybutton {
+//   display    : flex;
+//   align-items: center;
+
+//   // ion-input {
+//   //   // border-top: 0px;
+//   //   // border-bottom: 1px solid rgb(192, 188, 188);
+//   //   // border-left: 1px solid rgb(192, 188, 188);
+//   //   border: 1px solid rgb(192, 188, 188);
+//   //   border-radius: 5px;
+//   //   margin: 10px;
+//   //   height: 40px;
+//   //   text-indent: 10px;
+//   //   width: 80%;
+//   // }
+
+//   ion-button {
+//     color         : white;
+//     --background  : #f27c1a;
+//     text-transform: none;
+//   }
+// }

@@ -1,0 +1,235 @@
+ion-header {
+  ion-toolbar {
+    border-radius: 0px 0px 20px 20px;
+    --background : var(--ion-color-yellow);
+  }
+}
+
+ion-content {
+  --background: url("../../../assets/UI_Icons/before-dashboard/signup-background.jpg") 0 0/100% 100% no-repeat;
+
+  .container {
+    font-family: 'Arial', 'Helvetica', 'sans-serif';
+    text-align : center;
+    margin-top : -5px;
+
+    .logo {
+      text-align: center;
+      color     : white;
+      font-size : 22px;
+
+      p {
+        margin-top: -25px;
+      }
+    }
+
+    .form {
+      text-align      : center;
+      // margin-top: 10px;
+      margin          : 10px;
+      // padding      : 10px;
+
+      ion-item {
+        margin                   : 15px 0px;
+        --highlight-color-focused: transparent !important;
+        --highlight-color-valid  : transparent !important;
+        --highlight-color-invalid: transparent !important;
+        --highlight-color-focused: transparent !important;
+        padding                  : 0px;
+        --background             : transparent;
+
+
+        ion-select::part(placeholder) {
+          margin-left: 10px;
+        }
+
+        ion-select::part(text) {
+          color      : black;
+          margin-left: 10px;
+        }
+
+        ion-select::part(icon) {
+          color         : black;
+          opacity       : 1;
+          // margin-left: 10px;
+        }
+
+
+        ion-select {
+          height                  : 50px;
+          width                   : 70px;
+          justify-content         : center;
+          // margin-left          : 5px;
+          color                   : black;
+          --placeholder-color     : black;
+          --placeholder-opacity   : 1;
+          background              : white;
+          --background            : black;
+          border-top              : 1px solid gold;
+          border-left             : 1px solid gold;
+          border-bottom           : 1px solid gold;
+        }
+
+        ion-input {
+          border-bottom-color  : transparent;
+          height               : 50px;
+          border-top           : 1px solid gold;
+          border-bottom        : 1px solid gold;
+          border-right         : 1px solid gold;
+          --background         : black;
+          --color              : white;
+          --placeholder-color  : white;
+          --placeholder-opacity: 1;
+          --padding-start      : 10px;
+          background           : black;
+        }
+
+        .name,
+        .email,
+        .address,
+        .service {
+          border-bottom-color  : transparent;
+          height               : 50px;
+          border-top           : 1px solid gold;
+          border-bottom        : 1px solid gold;
+          border-right         : 1px solid gold;
+          border-left          : 1px solid gold;
+          --background         : black;
+          --color              : white;
+          --placeholder-color  : white;
+          --placeholder-opacity: 1;
+          --padding-start      : 10px;
+          background           : black;
+        }
+
+        #servicewaali {
+          // margin-top: -5px;
+          --border: 1px solid red;
+          border  : 2px solid red;
+        }
+
+        .service {
+          .select {
+            // border       : 1px solid red;
+            margin       : 0;
+            position     : absolute;
+            top          : 50%;
+            -ms-transform: translateY(-50%);
+            transform    : translateY(-50%);
+            left         : 10px;
+            width        : 90%;
+
+            .gap {
+              // border         : 1px solid blue;
+              justify-content: space-between;
+              display        : flex;
+              align-items    : center;
+
+              // width: 100%;
+            }
+          }
+        }
+      }
+
+      .serviceMargin{
+        margin-top: -12px;
+      }
+
+
+    }
+
+
+    .login {
+      text-align: right;
+      margin    : 10px;
+      padding   : 10px;
+
+      button {
+        // border             : 1px solid red;
+        width     : 90px;
+        height    : 90px;
+        background: transparent !important;
+      }
+
+
+    }
+
+    .signup {
+      text-align       : center;
+      // border        : 1px solid red;
+      margin-top       : -30px;
+      // vertical-align:text-top;
+
+      .accont-label {
+        font-family           : "arial";
+        color                 : white;
+        // font-weight        : bold;
+        margin-top            : 30px;
+        margin-bottom         : 0px;
+        // border       : 1px solid red;
+        // background      : black;
+        // position        : absolute;
+        // left            : 0;
+        // right           : 0;
+        // width           : 70%;
+
+        .bold {
+          font-weight: bold;
+          color      : white;
+        }
+      }
+    }
+
+
+
+    //
+  }
+
+
+
+  .styled-input-single {
+    margin: 14px 0px;
+
+    label {
+      font-size  : 16px;
+      font-family: "Fivo_sans_regular";
+      color      : var(--ion-color-blue);
+      cursor     : pointer;
+
+      &:before,
+      &:after {
+        top: 7px;
+      }
+
+      &:before {
+        left: 1px;
+      }
+
+      &:after {
+        left: 5px;
+      }
+    }
+  }
+
+  .btn-general {
+    font-size : 16px;
+    height    : 50px;
+    margin-top: 2.2rem;
+  }
+
+  .accont-label {
+    font-family  : "Fivo_sans_regular";
+    color        : var(--ion-color-dark-blue);
+    margin-top   : 25px;
+    margin-bottom: 0px;
+  }
+
+  .btn-signin {
+    font-size      : 16px;
+    font-family    : "Fivo_sans_medium";
+    color          : var(--ion-color-blue);
+    text-decoration: none;
+    margin         : 5px auto;
+    display        : block;
+  }
+}

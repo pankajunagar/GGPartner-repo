@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "916625484181",
+    "project_id": "beautician-a668a",
+    "storage_bucket": "beautician-a668a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916625484181:android:48d6cddd03287f433e2e9c",
+        "android_client_info": {
+          "package_name": "com.ggpartner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "916625484181-admhq9pto8irs1jsmqlu9m55iduf2fdm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnL5XPHxXOlL9m_PPjhn4AhpPJQY2goSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "916625484181-admhq9pto8irs1jsmqlu9m55iduf2fdm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916625484181:android:91fd7450cf5ef6803e2e9c",
+        "android_client_info": {
+          "package_name": "io.ionic.Beautician"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "916625484181-admhq9pto8irs1jsmqlu9m55iduf2fdm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnL5XPHxXOlL9m_PPjhn4AhpPJQY2goSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "916625484181-admhq9pto8irs1jsmqlu9m55iduf2fdm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

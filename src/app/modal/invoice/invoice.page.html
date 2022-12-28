@@ -1,0 +1,47 @@
+<ion-content class='center'>
+
+  <div class="card">
+    <div class="invoice">
+      <p>INVOICE</p>
+    </div>
+    <div class="text_icon">
+      <!-- <p>Have a coupon code, Please <span>apply</span> it below.</p>
+      <ion-icon (click)='close()' name='close-outline' slot="end"></ion-icon> -->
+      <ion-item lines=none>
+        <img src="../../../assets/UI_Icons/women-services/face.png" alt="" width="70px" height="70px">
+        <div>
+          <p id='bold'>{{name}}</p>
+          <p id='light'>{{location.split(', ' && ' ').slice(-1)}}</p>
+        </div>
+      </ion-item>
+    </div>
+    <div class="align">
+      <div>
+        <p id='bold'>Service Type</p>
+        <p id='light' *ngFor='let item of service_type; let i = index;'>{{item}}. </p>
+      </div>
+      <div>
+        <p id='bold'>Time Taken</p>
+        <p id='light'>{{duration}}</p>
+      </div>
+    </div>
+
+    <div class="amount">
+      <div class="amount1">
+        <div style="background: rgb(206, 171, 32); width: 10px; height: 50px;"></div>
+        <p id=left>Amount to be paid</p>
+      </div>
+      <div>
+        <p id='right'>AED {{totalAmount}}</p>
+      </div>
+      <!-- <p style="font-weight: bold;font-size: 16px; margin: 15px;">Service Location</p>
+      <p style="font-weight: 400; font-size: 14px; margin: 15px">N- Block, house no. 211, sectior 121, noida, up, india</p> -->
+
+    </div>
+    <div class="align">
+      <ion-button (click)='Confirm()'>Confirm</ion-button>
+      <!-- <ion-button (click)='close()'>Reject</ion-button> -->
+    </div>
+  </div>
+
+</ion-content>

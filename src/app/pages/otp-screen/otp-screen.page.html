@@ -1,0 +1,38 @@
+<ion-content>
+  <div>
+    <ion-item style="--background:transparent !important; color: white;" lines='none'>
+      <ion-buttons slot="start" class="ion-no-margin">
+        <ion-back-button defaultHref="tabs/home" icon="chevron-back" mode="md" class="btn-back"></ion-back-button>
+      </ion-buttons>
+      <ion-title header-title>OTP</ion-title>
+    </ion-item>
+  </div>
+  <div class="center">
+    <h5 class="info-title">Enter verification code</h5>
+    <p class="info-text">We have sent you 4 digit verification code on <br>
+      <span>{{userPhone_no}}</span>
+    </p>
+
+
+    <div class="otp-input-section">
+      <ion-input #otp1 required maxLength="1" inputmode="numeric" (keyup)="otpController($event,otp2,'')">
+      </ion-input>
+      <ion-input #otp2 required maxLength="1" inputmode="numeric" (keyup)="otpController($event,otp3,otp1)">
+      </ion-input>
+      <ion-input #otp3 required maxLength="1" inputmode="numeric" (keyup)="otpController($event,otp4,otp2)">
+      </ion-input>
+      <ion-input #otp4 required maxLength="1" inputmode="numeric" (keyup)="otpController($event,'',otp3)">
+      </ion-input>
+    </div>
+
+
+
+    <div expand="block" class="ion-no-margin btn-general" *ngIf='state==="start"'>
+      {{remtime}}
+    </div>
+    <div expand="block" class="ion-no-margin btn-general" *ngIf='state==="stop"' (click)='reSendOTP()'>
+      Resend OTP
+    </div>
+  </div>
+
+</ion-content>

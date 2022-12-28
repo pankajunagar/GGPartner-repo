@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">GG Partner</string>
+    <string name="title_activity_main">GG Partner</string>
+    <string name="package_name">io.ionic.Beautician</string>
+    <string name="custom_url_scheme">io.ionic.Beautician</string>
+</resources>

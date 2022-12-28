@@ -1,0 +1,30 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>serviceslistmodal</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class='center'>
+
+  <div class="CARD">
+    <div *ngFor='let item of servicesList; let i = index;'>
+      <ion-item>
+        <ion-label>
+          {{item.name}}
+        </ion-label>
+        <ion-checkbox [(ngModel)]="item.isChecked">
+        </ion-checkbox>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="CARD2">
+    <ion-button (click)='modalClose()'>DONE</ion-button>
+  </div>
+
+  <!-- <div *ngFor='let item of servicesList; let i = index;'>
+    <div >
+      {{item.id}}
+    </div>
+  </div> -->
+</ion-content>

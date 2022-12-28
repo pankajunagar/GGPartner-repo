@@ -1,0 +1,8 @@
+{
+  "name": "Beauti",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

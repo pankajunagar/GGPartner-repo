@@ -1,0 +1,163 @@
+ion-content {
+  --padding-top: 10px;
+  --background : url("../../../assets/images/before-dashboard/background.jpg") 0 0/100% 100% no-repeat;
+
+  text-align: center;
+
+  // url("../../../assets/images/before-dashboard/background.jpg")
+  .container {
+    text-align: center;
+    margin    : 0;
+    position  : relative;
+    top       : 50px;
+    left      : 0;
+    right     : 0;
+    bottom    : 0;
+
+    .logo {
+      text-align: center;
+      color     : white;
+
+      p {
+        margin-top: -10px;
+        font-size : 22px;
+      }
+    }
+
+    .form {
+      text-align               : center;
+      justify-content          : center;
+      // margin-top: 10px;
+      // margin          : 10px;
+      // padding      : 10px;
+      // margin-left        : 5px;
+      // margin-right       : 5px;
+      // border                : 1px solid red;
+      border-top               : 1px solid gold;
+      border-bottom            : 1px solid gold;
+      border-right             : 1px solid gold;
+      border-left              : 1px solid gold;
+      background               : black;
+
+      ion-item {
+        // border                   : 1px solid blue;
+        --highlight-color-focused: transparent !important;
+        --highlight-color-valid  : transparent !important;
+        --highlight-color-invalid: transparent !important;
+        --highlight-color-focused: transparent !important;
+        padding                  : 0px;
+        --padding                : 0px;
+        --background             : transparent;
+        width                    : 100%;
+        margin                   : 0px;
+        // text-align: center;
+        // align-items: center;
+
+        // .flag {
+        //   background: white;
+        // }
+
+        ion-select::part(placeholder) {
+          margin-left: 10px;
+
+        }
+
+        ion-select::part(text) {
+          color      : black;
+          margin-left: 10px;
+        }
+
+        ion-select::part(icon) {
+          color         : black;
+          opacity       : 1;
+          // margin-left: 10px;
+        }
+
+
+        ion-select {
+          // flex                       : 2;
+          height                     : 55px;
+          width                      : 70px;
+          justify-content            : center;
+          // margin-left             : 5px;
+          color                      : black;
+          --placeholder-color        : black;
+          --placeholder-opacity      : 1;
+          background                 : white;
+          --background               : black;
+          border-top                 : 1px solid gold;
+          border-left                : 1px solid gold;
+          border-bottom              : 1px solid gold;
+          // border               : 1px solid red;
+        }
+
+        ion-input {
+          // flex                    : 9;
+          border-bottom-color        : transparent;
+          height                     : 55px;
+          // border-top              : 1px solid gold;
+          // border-bottom           : 1px solid gold;
+          // border-right            : 1px solid gold;
+          --background               : black;
+          --color                    : white;
+          --placeholder-color        : white;
+          --placeholder-opacity      : 1;
+          --padding-start            : 10px;
+          background                 : black;
+
+          // width                : 100%;
+        }
+      }
+    }
+
+    .login {
+      // border: 1px solid red;
+      margin-top: 15px;
+      text-align: right;
+      margin    : 10px;
+      padding   : 10px;
+
+      img {
+        width : 70px;
+        height: 70px;
+      }
+    }
+
+    .text {
+      display: flex;
+    }
+  }
+
+  .btn-forgot {
+    font-size  : 16px;
+    font-family: "Fivo_sans_regular";
+    color      : var(--ion-color-blue);
+    margin-top : 10px;
+  }
+
+  .btn-general {
+    font-size : 16px;
+    height    : 50px;
+    margin-top: 5rem;
+  }
+
+  .accont-label {
+    font-family  : "arial";
+    color        : white;
+    margin-top   : 30px;
+    margin-bottom: 0px;
+
+    .bold {
+      font-weight: bold;
+    }
+  }
+
+  .btn-signin {
+    font-size      : 16px;
+    font-family    : "Fivo_sans_medium";
+    color          : white;
+    text-decoration: none;
+    margin         : 5px auto;
+    display        : block;
+  }
+}

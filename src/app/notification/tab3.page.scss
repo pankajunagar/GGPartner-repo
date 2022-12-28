@@ -1,0 +1,102 @@
+ion-content {
+
+  .noavail {
+    // display       : table-cell;
+    vertical-align: middle;
+    text-align    : center;
+    // border: 1px solid blue;
+
+    ion-icon {
+      color    : rgb(17, 0, 255);
+      font-size: 25px;
+    }
+  }
+
+  .card {
+    width        : 100%;
+    box-shadow   : 2px 5px 5px rgb(128, 128, 128);
+    background   : white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    .align {
+      display    : flex;
+      align-items: center;
+
+      .div1 {
+        flex         : 3;
+        // border: 1px solid brown;
+        text-align   : center;
+        margin-left  : 10px;
+        padding-right: 5px;
+
+        img {
+          border-radius: 50%;
+        }
+
+        p {
+          font-size  : 18px;
+          font-weight: bold;
+
+          span {
+            color: rgb(182, 152, 30);
+          }
+        }
+      }
+
+      .div2 {
+        flex       : 7;
+        padding-top: 10px;
+
+        .div2_1 {
+          display        : flex;
+          align-items    : center;
+          justify-content: space-between;
+          height         : 30px;
+          // border: 1px solid red;
+
+          #name {
+            font-size     : 18px;
+            font-weight   : 600;
+            text-transform: none;
+            // border: 1px dotted blue;
+          }
+
+          #duration {
+            font-size   : 14px;
+            color       : gray;
+            // border: 1px dotted blue;
+            margin-right: 5px;
+            margin-top  : -5px;
+          }
+        }
+
+        #location {
+          font-weight: 470;
+          font-size  : 14px;
+          color      : rgb(30, 30, 30);
+          // border: 1px solid orange;
+        }
+
+        #address {
+          font-size: 14px;
+          color    : gray;
+          // border: 1px solid orange;
+        }
+
+        #timing {
+          font-weight: 470;
+          font-size  : 14px;
+          color      : rgb(30, 30, 30);
+          // border: 1px solid orange;
+        }
+
+        #time {
+          font-size: 14px;
+          color    : gray;
+          // border: 1px solid orange;
+        }
+      }
+    }
+  }
+}

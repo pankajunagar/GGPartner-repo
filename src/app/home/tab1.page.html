@@ -1,0 +1,91 @@
+<!-- <ion-header [translucent]="true"  class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <div class="map" #search #map>
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [zoomControl]="false" ngStyles="styles"
+      [streetViewControl]="false">
+      <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true" (dragEnd)="markerDragEnd($event)">
+      </agm-marker>
+    </agm-map>
+
+  </div>
+  <ion-button class="button" expand='block' (click)="changenetwork('online')" *ngIf='networkStatus==="Go Online"'>
+    {{networkStatus}}
+  </ion-button>
+  <ion-button class="button" expand='block' (click)="changenetwork('offline')" *ngIf='networkStatus==="Go Offline"'>
+    {{networkStatus}}
+  </ion-button>
+  <!-- <ion-button class="button" (click)="getLocationByNotification(lat, lng)">getlocation</ion-button> -->
+
+  <div class="serviceStart" *ngIf='serviceAccepted=== true'>
+    <div class="horizon">
+      <div class="action1">
+        <div class="align">
+          <div style="margin-right: 10px; ">
+            <img src="../../assets/UI_Icons/women-services/face.png" alt="" width="50px" height="50px"
+              *ngIf='userPhoto===null'>
+            <img src={{userPhoto}} alt="" width="50px" height="50px" *ngIf='userPhoto!==null'>
+          </div>
+          <div>
+            <p style="font-size: 16px; font-weight: 490;">{{userName}}</p>
+            <p style="font-size: 14px; font-weight: 300; margin-top: -10px;">{{userLocation.split(', ' && '
+              ').slice(-1)}}</p>
+          </div>
+        </div>
+        <div>
+          <p style="font-size: 16px; font-weight: 490;">Service Type</p>
+          <p style="font-size: 14px; font-weight: 300; margin-top: -10px;"
+            *ngFor='let item of service_Name; let i = index;'>{{item}}.</p>
+        </div>
+      </div>
+      <div class="action2">
+        <div id="start" (click)="startService(true)">
+          <p>Start</p>
+        </div>
+        <div id='cancel' (click)="canelService(true)">
+          <p>Cancel</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="serviceEnd" *ngIf='serviceStarted === true'>
+    <div class="timercount">
+      <!-- <p>here</p> -->
+      <ion-icon name='time-outline'></ion-icon>
+      <p class="count" id='timer'>{{clock}}</p>
+    </div>
+    <div class="horizon">
+      <div class="action1">
+        <div class="align">
+          <div style="margin-right: 10px;">
+            <img src="../../assets/UI_Icons/women-services/face.png" alt="" width="50px" height="50px"
+              *ngIf='userPhoto===null'>
+            <img src={{userPhoto}} alt="" width="50px" height="50px" *ngIf='userPhoto!==null'>
+          </div>
+          <div>
+            <p style="font-size: 16px; font-weight: 490;">{{userName}}</p>
+            <p style="font-size: 14px; font-weight: 300; margin-top: -10px;">{{userLocation.split(', ' && '
+              ').slice(-1)}}</p>
+          </div>
+        </div>
+        <div>
+          <p style="font-size: 16px; font-weight: 490;">Service Type</p>
+          <p style="font-size: 14px; font-weight: 300; margin-top: -10px;"
+            *ngFor='let item of service_Name; let i = index;'>{{item}}. </p>
+        </div>
+      </div>
+      <div class="service">
+        <div id="endservice" (click)="startService(false)">
+          <p>End Service</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

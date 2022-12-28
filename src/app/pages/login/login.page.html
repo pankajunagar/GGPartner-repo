@@ -1,0 +1,53 @@
+<ion-content class="ion-padding-horizontal">
+  <div class="container">
+    <div class="logo">
+      <img src="../../../assets/UI_Icons/splash/logonew-1.png" alt="" height="200px" width="200px">
+      <p>LOGIN</p>
+    </div>
+
+    <div class="form">
+      <!-- <div class="flag ion-no-padding">
+        <img src="{{selectedCode.split(' ')[1]}}" alt="" width="50px" height="40px">
+      </div> -->
+      <ion-item class="ion-no-padding">
+
+        <ion-select placeholder='+91' [(ngModel)]="selectedCode" (click)="loadFlags()" [compareWith]='compareWith'
+          class="ion-no-padding">
+          <ion-select-option value="{{code.callingCodes}} {{code.flag}}"
+            *ngFor='let code of country_code; let i= index;'>
+            +{{code.callingCodes}}
+          </ion-select-option>
+        </ion-select>
+        <ion-input placeholder='Mobile Number' inputmode='numeric' autocomplete clearOnEdit enterkeyhint='send'
+          type="tel" maxlength='15' [(ngModel)]='phone_number' (ngModelChange)="switchMethod('number')"></ion-input>
+      </ion-item>
+    </div>
+    <p style="color: white;">OR</p>
+    <div class="form">
+      <ion-item>
+        <ion-input class="email" clear-on-edit='true' required='true' placeholder='Email Address' type="email"
+          [(ngModel)]='data.email' (ngModelChange)="switchMethod('email')">
+        </ion-input>
+      </ion-item>
+    </div>
+    <br>
+    <div class="form">
+      <ion-item>
+        <ion-input class="password" clear-on-edit='true' required='true' placeholder='Enter Password' type="password"
+          [(ngModel)]='data.password' (ngModelChange)="switchMethod('password')">
+        </ion-input>
+      </ion-item>
+    </div>
+    <div class="login" *ngIf='phone_number!=""&& phone_number!=undefined' (click)="Login('byOtp')">
+      <img src="../../../assets/UI_Icons/before-dashboard/button.png" alt="">
+    </div>
+    <div class="login" *ngIf='data.email!=""&& data.email!=undefined && data.password!=""&& data.password!=undefined'
+      (click)="Login('byCrdentials')">
+      <img src="../../../assets/UI_Icons/before-dashboard/button.png" alt="">
+    </div>
+    <p class="accont-label ">Don't have an account?
+      <span class="bold" (click)="doSignUp()">Sign Up</span>
+    </p>
+  </div>
+
+</ion-content>
