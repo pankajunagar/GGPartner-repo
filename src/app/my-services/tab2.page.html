@@ -39,10 +39,11 @@
         </div>
         <div class="div2">
           <div class="div2_1">
-            <p id="name">{{item.name}}</p>
+            <p id="name">{{item?.name}}</p>
             <p id='duration'>{{item.duration}} mins</p>
           </div>
-          <p id="location">Service Location</p>
+          <p class="ion-no-margin ion-margin-top"><b>Service: </b> <span *ngIf="item?.service?.name">{{item.service.name}}</span></p>
+          <!-- <p id="location" class="ion-no-margin" *ngIf="item?.service?.name">{{item.service.name}}</p> -->
           <p id="address" *ngIf='item.location!==null'>{{item.location}}.</p>
           <p id="address" *ngIf='item.location===null'>Location not Available.</p>
           <p id="timing">Timing</p>
