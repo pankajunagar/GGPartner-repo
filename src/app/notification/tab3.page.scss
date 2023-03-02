@@ -22,7 +22,7 @@ ion-content {
     .align {
       display    : flex;
       align-items: center;
-
+      color: black !important;
       .div1 {
         flex         : 3;
         // border: 1px solid brown;
@@ -32,6 +32,7 @@ ion-content {
 
         img {
           border-radius: 50%;
+          object-fit: cover;
         }
 
         p {
