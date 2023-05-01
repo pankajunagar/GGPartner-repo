@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.Beautician",
-	"appName": "Beauti",
+	"appId": "com.ggsalonpartner",
+	"appName": "GG Partner",
 	"webDir": "www",
 	"bundledWebRuntime": false,
 	"plugins": {
@@ -8,6 +8,13 @@
 			"smallIcon": "ic_stat_icon_config_sample",
 			"iconColor": "#488AFF",
 			"sound": "beep.wav"
+		},
+		"PushNotifications": {
+			"presentationOptions": [
+				"badge",
+				"sound",
+				"alert"
+			]
 		}
 	}
 }

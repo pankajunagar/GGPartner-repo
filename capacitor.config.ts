@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.Beautician',
-  appName: 'Beauti',
+  appId: 'com.ggsalonpartner',
+  appName: 'GG Partner',
   webDir: 'www',
   bundledWebRuntime: false,
   plugins: {

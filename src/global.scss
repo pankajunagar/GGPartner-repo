@@ -28,3 +28,8 @@
 .modal-wrapper, .inner-scroll {
   background: transparent !important;
 }
+
+
+.header-ele::part(native){
+  padding-top: calc(env(safe-area-inset-top) + 0px);
+}

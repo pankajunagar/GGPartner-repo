@@ -3,7 +3,7 @@ import { ApiService } from '../services/api.service';
 import { CartService } from '../services/cart.service';
 import { UtilService } from "../services/util.service";
 import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
-import { ActionSheetController, NavController, Platform } from '@ionic/angular';
+import { ActionSheetController, AlertController, NavController, Platform } from '@ionic/angular';
 import { Router } from '@angular/router';
 // import { ImagePicker } from '@ionic-native/image-picker/ngx';
 // import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
@@ -48,6 +48,7 @@ export class ProfilePage implements OnInit {
     private actionSheetController: ActionSheetController,
     // private androidPermission: AndroidPermissions,
     private platform: Platform,
+    private alerCtrl: AlertController
     // private diagnostic: Diagnostic,
   ) {
     this.getUserData();
@@ -253,6 +254,45 @@ export class ProfilePage implements OnInit {
       this.navCtrl.navigateRoot('/login');
       this.util.dismissLoader();
     }, 2000)
+  }
+
+  async deleteAccount() {
+    const alert = await this.alerCtrl.create({
+      header: 'Alert!',
+      message: 'Are you sure you want to delete your account?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+        },
+        {
+          text: 'OK',
+          role: 'confirm',
+          handler: () => this.delete()
+        }
+      ]
+    });
+    await alert.present();
+  }
+
+  delete() {
+    // debugger
+    this.util.startLoad();
+    this.api.postDataWithToken('deleteuser',{}).subscribe((res: any) => {
+      console.log(res);
+      this.edit_info = false;
+      this.util.dismissLoader();
+      if (res.success === true) {
+        this.util.presentToast('Your account deleted successfully.');
+        localStorage.clear();
+        this.navCtrl.navigateRoot('/login');
+      } else {
+        this.util.presentToast('SOMETHING WENT WRONG');
+      }
+    }, (err) => {
+      this.util.presentToast('SOMETHING WENT WRONG');
+      this.util.dismissLoader();
+    })
   }
 
 }

@@ -6,7 +6,7 @@
 
 <ion-content style="--background: linear-gradient(to bottom, rgb(255, 255, 255, 1), rgb(248,237,219))">
   <div>
-    <ion-item style="--background:#d0ab35 !important; color: white;" lines='none'>
+    <ion-item style="--background:#d0ab35 !important; color: white;" mode="md" class="header-ele" lines='none'>
       <ion-buttons slot="start" class="ion-no-margin">
         <ion-back-button defaultHref="tabs/home" icon="chevron-back" mode="md" class="btn-back"></ion-back-button>
       </ion-buttons>
@@ -86,5 +86,7 @@
       </div>
     </div>
   </div>
-
+  <div class="ion-text-center delete-account"> 
+    <ion-button color="dark" (click)="deleteAccount()"> Delete Account</ion-button>
+  </div>
 </ion-content>

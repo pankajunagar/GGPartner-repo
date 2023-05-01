@@ -11,7 +11,7 @@
       </div> -->
       <ion-item class="ion-no-padding">
 
-        <ion-select placeholder='+91' [(ngModel)]="selectedCode" (click)="loadFlags()" [compareWith]='compareWith'
+        <ion-select mode="md" placeholder='+91' [(ngModel)]="selectedCode" (click)="loadFlags()" [compareWith]='compareWith'
           class="ion-no-padding">
           <ion-select-option value="{{code.callingCodes}} {{code.flag}}"
             *ngFor='let code of country_code; let i= index;'>

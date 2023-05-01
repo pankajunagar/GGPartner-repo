@@ -40,7 +40,7 @@
       </ion-item> -->
       <ion-item>
         <!-- <img src="{{flagcountry}}" alt="" height="40px" width="40px"> -->
-        <ion-select placeholder='+971' [(ngModel)]="selectedCode" (click)="loadFlags()">
+        <ion-select mode="md" placeholder='+971' [(ngModel)]="selectedCode" (click)="loadFlags()">
           <ion-select-option value="{{code.callingCodes}} {{code.flag}}"
             *ngFor='let code of country_code; let i= index;'>
             +{{code.callingCodes}}
